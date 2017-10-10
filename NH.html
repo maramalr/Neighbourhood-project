@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Neighborhood Map </title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+   <div class="container">
+   
+    <div class="options-box">
+         <h1>My Favoriate Places </h1> 
+
+        <div id="search">
+        <!--tag is used to create an HTML form for user input -->
+
+        <form  class="find" id = "Fav-list" data-bind="button: filterplace">
+        <input type="text" name="find-string" id="str-find" class="find-input">
+        <input type="button" value="Filter" class="find-btn">
+        </form>
+        </div>
+<!-- 
+        <ul class="list" data-bind='foreach: locationsList'>
+        <p class="loc" data-bind="text: title, click: $parent.showLocation, visable: show"> </p>
+        </ul> -->
+
+      </div>
+<div id="map"> </div>
+
+</div>
+
+
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJYvr_fpDFg4Y1flY9Bk0JE5NlcBTD2bI&v=3&callback=initMap">
+</script>
+<script src="NHP.js"></script>
+<script src="knockout-3.4.2.js"></script>
+
+
+</body>
+
+</html>
