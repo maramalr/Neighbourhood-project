@@ -6,7 +6,7 @@ var markers = [];
 var infowindows = new google.maps.InfoWindow();
 
 function initMap()
-	{
+  {
 // constrcutrt creates a new map - only center and zoom are required 
 map = new google.maps.Map(document.getElementById('map'),{
 
