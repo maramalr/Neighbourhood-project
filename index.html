@@ -3,41 +3,44 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <title> Neighborhood Map </title>
- <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Neighborhood Map </title>
+  <link rel="stylesheet" href="styles.css">
+
 
 </head>
+
 <body>
-<div class="container">
-<div class="options-box">
+  <div class="container">
+      <div class="options-box">
 
-<h1> faviroat places </h1>
+      <h1> Favourite places </h1>
 
-<div id="search">
+      <div id="search">
 
-     <form  class="find" id = "Fav-list" data-bind="button: filterplace">
-        <input type="text" id="str-find" class="find-input">
-        <input type="button" value="Filter" class="find-btn">
-        </form>
-        </div>
+        <input data-bind="textInput: filter">
 
-        <ul data-bind="foreach: filterList" class="p-list">
+      </div>
+
+      <ul data-bind="foreach: filterList" class="p-list">
         <li data-bind="text: title, click: $parent.listClick"> </li>
-        </ul>
-  </div>
+      </ul>
+    </div>
 
-  </div>
+    </aside>
+  <div id="map"> </div>
 
-<div id="map"> </div>
+    </div>
 
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJYvr_fpDFg4Y1flY9Bk0JE5NlcBTD2bI&v=3&callback=initMap">
-</script>
-<script src="app.js"></script>
-<script src="knockout-3.4.2.js"></script>
-<script src="jquery-3.2.1.min.js"></script>
 
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJYvr_fpDFg4Y1flY9Bk0JE5NlcBTD2bI&v=3&callback=initMap">
+  </script>
+  <script src="knockout-3.4.2.js"></script>
+  <script src="jquery-3.2.1.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <script src="app.js"></script>
 </body>
+
 </html>
