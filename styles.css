@@ -1,4 +1,4 @@
-     html, body { 		font-family: : Arial, sans-serif;
+   html, body { 		font-family: : Arial, sans-serif;
 		height: 100%;
 		margin: 0;
 		padding: 0;
@@ -21,8 +21,6 @@
         right: 0px;
 
       }
-
-
         .options-box {
         background: black;
         border: 1px solid #999;
@@ -32,7 +30,19 @@
         padding: 10px 10px 30px 10px;
         text-align: left;
         width: 340px;
+       position: absolute;
+  /* This trasform moves the drawer off canvas. */
+  -webkit-transform: translate(-340px, 0);
+  transform: translate(-340px, 0);
+  /* Optionally, we animate the drawer. */
+  transition: transform 0.3s ease;
+  z-index: 5;
       }
+
+  .options-box.open {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
 
 .find-btn{
   color:white;
@@ -44,3 +54,11 @@
    color:white;
 }
 
+.nav{
+color: #fff;
+font-size: 30px;
+position: fixed;
+top:0;
+z-index: 5;
+right: 0;
+}

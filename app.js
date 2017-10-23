@@ -1,3 +1,8 @@
+$("#nav-bar").click('click', function(e) {
+  $("#option-box-id").toggleClass('open');
+  e.stopPropagation();
+});
+
 //initialize map
 var map;
 
