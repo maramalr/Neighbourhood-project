@@ -29,12 +29,10 @@
         line-height: 30px;
         padding: 10px 10px 30px 10px;
         text-align: left;
-        width: 340px;
+        width: 280px;
        position: absolute;
-  /* This trasform moves the drawer off canvas. */
-  -webkit-transform: translate(-340px, 0);
-  transform: translate(-340px, 0);
-  /* Optionally, we animate the drawer. */
+  -webkit-transform: translate(-280px, 0);
+  transform: translate(-280px, 0);
   transition: transform 0.3s ease;
   z-index: 5;
       }
@@ -61,4 +59,5 @@ position: fixed;
 top:0;
 z-index: 5;
 right: 0;
+padding-right: 30px
 }
