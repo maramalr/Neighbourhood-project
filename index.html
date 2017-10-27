@@ -1,41 +1,41 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 
-<html lang="en">
+  <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Neighborhood Map </title>
-  <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Neighborhood Map </title>
+    <link rel="stylesheet" href="styles.css">
 
 
-</head>
+  </head>
 
-<body>
-  <div class="container">
+  <body>
+    <div class="container">
 
-  <div class="nav" id="nav-bar">
-&#9776;
-</div>
+      <div class="nav" id="nav-bar">
+        &#9776;
+      </div>
       <div class="options-box" id="option-box-id">
 
-      <h1> Favourite places </h1>
+        <h1> Favourite places </h1>
 
-      <div id="search">
+        <div id="search">
 
-        <input data-bind="textInput: filter">
+          <input data-bind="textInput: filter">
 
+        </div>
+
+        <ul data-bind="foreach: filterList" class="p-list">
+          <li data-bind="text: title, click: $parent.listClick"> </li>
+        </ul>
       </div>
 
-      <ul data-bind="foreach: filterList" class="p-list">
-        <li data-bind="text: title, click: $parent.listClick"> </li>
-      </ul>
-    </div>
-
     </aside>
-  <div id="map"> </div>
+    <div id="map"> </div>
 
-    </div>
+  </div>
 
 
 
