@@ -134,6 +134,7 @@ function initMap() {
 
             infoWindow.setContent('<h4>' + marker.title + '</h4>' + '<p>' + address + '</p>');
             infoWindow.open(map, marker)
+            //populateInfoWindow(marker, largeInfowindow);
         }).fail(function() {
             alert("The Foursquare API has an error.");
         }); 
