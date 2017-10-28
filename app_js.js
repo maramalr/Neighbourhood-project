@@ -81,12 +81,16 @@ function initMap() {
     // Push the marker to our array of markers.
     markers.push(marker);
     // Create an onclick event to open an infowindow at each marker.
-    marker.addListener('click', function() {
+    marker.addListener('click', markerClick); //function() {
       //this refer to the marker 
+     // foursquareApi(this, largeInfowindow);
+
+    //});
+  };
+  function markerClick(){
       foursquareApi(this, largeInfowindow);
 
-    });
-  }
+          };
 
   function populateInfoWindow(marker, infowindow) {
     // Check to make sure the infowindow is not already opened on this marker.
