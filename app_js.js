@@ -89,6 +89,11 @@ function initMap() {
   }
   function markerClick(){
       foursquareApi(this, largeInfowindow);
+         if (marker.getAnimation() !== null) {
+          marker.setAnimation(null);
+        } else {
+          marker.setAnimation(google.maps.Animation.BOUNCE);
+        }
 
           }
 
