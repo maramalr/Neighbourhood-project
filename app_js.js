@@ -86,11 +86,11 @@ function initMap() {
      // foursquareApi(this, largeInfowindow);
 
     //});
-  };
+  }
   function markerClick(){
       foursquareApi(this, largeInfowindow);
 
-          };
+          }
 
   function populateInfoWindow(marker, infowindow) {
     // Check to make sure the infowindow is not already opened on this marker.
