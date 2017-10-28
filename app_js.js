@@ -83,7 +83,7 @@ function initMap() {
     // Create an onclick event to open an infowindow at each marker.
     marker.addListener('click', function() {
       //this refer to the marker 
-      foursquareApi(this, largeInfowindow)
+      foursquareApi(this, largeInfowindow);
 
     });
   }
@@ -99,7 +99,7 @@ function initMap() {
       infowindow.addListener('closeclick', function() {
         infowindow.setMarker = null;
       });
-    };
+    }
   }
 }
 
@@ -109,23 +109,23 @@ function foursquareApi(marker, infoWindow){
   var CLIENT_ID = "V4SM1D2MGA1LM44XFVOA023CGPDLUEFFNBXDE3G4VYXQQXJN";
   var CLIENT_SECRET = "RDZEGYVSPPXGJRKMMBC1PNW1NJ1MDOUB40GOJMBJL0JZKEKW";
 
-        console.log(marker.position.lng())
-        var LL = marker.position.lat().toString() + ',' + marker.position.lng().toString()
-        console.log(LL)
+        console.log(marker.position.lng());
+        var LL = marker.position.lat().toString() + ',' + marker.position.lng().toString();
+        console.log(LL);
 
         var version = "20172210";
-        var query = 'Restaurants'
+        var query = 'Restaurants';
         var URL = "https://api.foursquare.com/v2/venues/search?" +
         "ll=" + LL + "&query=" + query + "&client_id=" +
         CLIENT_ID + "&client_secret=" + CLIENT_SECRET +
         '&v=' + version;
 
         $.getJSON(URL).done(function(data) {
-          console.log(data)
-          var address = data.response.venues[0].location.address
+          console.log(data);
+          var address = data.response.venues[0].location.address;
 
           infoWindow.setContent('<h4>' + marker.title + '</h4>' + '<p>' + address + '</p>');
-          infoWindow.open(map, marker)
+          infoWindow.open(map, marker);
             //populateInfoWindow(marker, largeInfowindow);
           }).fail(function() {
             alert("The Foursquare API has an error.");
