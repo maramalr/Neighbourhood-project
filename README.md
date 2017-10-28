@@ -2,7 +2,7 @@
 
 By Getting support and help from Udacity Mentors and Instructors and by following these useful links and lessons I've came up and completed this Neighborhood Map project using JavaScript, jQuery, knockoutJS, Google Maps AP and Foursquare API. 
 
-** Useful links
+# Useful links
 
 - https://developers.google.com/maps/documentation/javascript/tutorial
 - https://developers.google.com/maps/documentation/javascript/markers
