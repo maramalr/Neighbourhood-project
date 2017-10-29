@@ -80,7 +80,7 @@
               animation: google.maps.Animation.DROP,
               id: locations[i].fsId
           });
-          console.log(marker)
+          console.log(marker);
           // Attach the marker to the place object
           view.places()[i].marker = marker;
           // Push the marker to our array of markers.
@@ -100,7 +100,7 @@
           marker.setAnimation(google.maps.Animation.BOUNCE);
 
           setTimeout(function() {
-              marker.setAnimation(null)
+              marker.setAnimation(null);
           }, 2100);
 
 
@@ -127,7 +127,7 @@
 
   //calling foursquare API
   function foursquareApi(marker, infoWindow) {
-      console.log(marker)
+      console.log(marker);
       var CLIENT_ID = "V4SM1D2MGA1LM44XFVOA023CGPDLUEFFNBXDE3G4VYXQQXJN";
       var CLIENT_SECRET = "RDZEGYVSPPXGJRKMMBC1PNW1NJ1MDOUB40GOJMBJL0JZKEKW";
 
